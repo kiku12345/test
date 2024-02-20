@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Drive Alert</title>
+</head>
+
+<body>
+    <header>
+        <div class="bg-nav text-light d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+            <h5 class="my-0 mr-md-auto font-weight-normal">DriveAlert</h5>
+            <nav class="my-2 my-md-0 mr-md-3 text-light">
+                <a class="p-2 btn text-light" href="/home">Home</a>
+                <a class="p-2 btn text-light" href="/Camera">Camera</a>
+                <a class="p-2 btn text-light" href="/profile">Profile</a>
+                <a class="p-2 btn text-light" href="/settings">Settings</a>
+                <a class="p-2 btn btn-primary position-relative bg-blue" href="{{url_for('logout')}}">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Welcome to DriveAlert</h1>
+            </div>
+        </div>
+    </div>
+
+    <main role="main">
+        <div id="cro" class="drive-alert carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#cro" data-slide-to="0" class="active"></li>
+                <li data-target="#cro" data-slide-to="1"></li>
+                <li data-target="#cro" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="first-slide" src="{{ url_for('static', filename='#') }}" alt="First slide">
+                    <div class="container">
+                        <div class="drive-alert-caption text-left">
+                            <h1>Join the DriveAlert Community</h1>
+                            <p>Ready to drive with confidence? Become a part of our community today and experience
+                                the future of road safety!</p>
+                            <p><a class="btn btn-lg btn-primary" href="/" role="button">Register today</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="second-slide" src="{{ url_for('static', filename='#') }}" alt="Second slide">
+                    <div class="container">
+                        <div class="drive-alert-caption text-center">
+                            <h1>Stay Alert, Stay Safe on the Road</h1>
+                            <p>An advanced Driver Drowsiness Detection system to enhance road safety.</p>
+                            <p><a class="btn btn-lg btn-primary" href="/Camera" role="button">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="third-slide" src="{{ url_for('static', filename='#') }}" alt="Third slide">
+                    <div class="container">
+                        <div class="drive-alert-caption text-right">
+                            <h1>How It Works</h1>
+                            <p>Our system uses advanced facial recognition and eye-tracking technology...</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#cro" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#cro" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <section class="features-section text-center mt-5 mb-5">
+            <div class="container">
+                <h2>Explore DriveAlert Innovations</h2>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img class="rounded-circle" src="{{ url_for('static', filename='Eyetracking.jpeg') }}"
+                            alt="Eye Tracking" width="140" height="140">
+                        <h2>Eye Tracking</h2>
+                        <p>Real-time monitoring of driver's eye movements.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img class="rounded-circle" src="{{ url_for('static', filename='Face_recognition.jpg') }}"
+                            alt="Facial Recognition" width="140" height="140">
+                        <h2>Facial Recognition</h2>
+                        <p>Identify the driver and monitor facial expressions.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img class="rounded-circle" src="{{ url_for('static', filename='Alert_system.jpg') }}"
+                            alt="Alert System" width="140" height="140">
+                        <h2>Alert System</h2>
+                        <p>Instant alerts for signs of drowsiness and fatigue.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section text-center mt-5 mb-5">
+            <div class="container">
+                <h2>Discover the DriveAlert Advantage</h2>
+                <div class="row">
+                    <div class="col-md-4 benefit">
+                        <img src="{{ url_for('static', filename='Traffic_rules.jpg') }}" alt="Enhanced Road Safety"
+                            width="140" height="140">
+                        <h3>Enhanced Road Safety</h3>
+                        <p>Stay safe on the road with our advanced Driver Drowsiness Detection system, minimizing the
+                            risk of accidents.</p>
+                    </div>
+                    <div class="col-md-4 benefit">
+                        <img src="{{ url_for('static', filename='Safe_distance.jpg') }}" alt="Prevention of Accidents"
+                            width="140" height="140">
+                        <h3>Prevention of Accidents</h3>
+                        <p>Proactively prevent accidents by receiving instant alerts for signs of drowsiness or fatigue
+                            while driving.</p>
+                    </div>
+                    <div class="col-md-4 benefit">
+                        <img src="{{ url_for('static', filename='Warning.jpg') }}" alt="Increased Driver Awareness"
+                            width="140" height="140">
+                        <h3>Increased Driver Awareness</h3>
+                        <p>Our system enhances driver awareness, promoting focused and attentive driving for a safer
+                            journey.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section text-center mt-5 mb-5">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have questions? Reach out to us for more information.</p>
+                <a href="#" class="btn btn-primary">Contact Us</a>
+            </div>
+        </section>
+
+        <footer class="footer-section text-center mt-5">
+            <div class="container">
+                <p>&copy; 2023 Driver Drowsiness Detection System. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
